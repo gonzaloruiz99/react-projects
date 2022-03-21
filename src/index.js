@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import './reset.css';
 
+import Setup from "./projects/day1_menu/App"
 import App from "./App"
 
 ReactDOM.render(

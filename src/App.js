@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 
 
 
@@ -18,19 +18,19 @@ function App() {
 
 
   return(
-     <BrowserRouter>
+     <HashRouter >
       <Routes>
-        <Route exact path="/react-projects/" element={<Home/>} />
+        <Route exact path="/" element={<Home/>} />
 
-        <Route exact path="/react-projects/Menu" element={<Menu/>} />
-        <Route exact path="/react-projects/Shorten" element={<Shorten/>} />
-        <Route exact path="/react-projects/Countries" element={<Countries/>} />
-        <Route exact path="/react-projects/Tictactoe" element={<Tictactoe/>} />
-        <Route exact path="/react-projects/Bookmark" element={<Bookmark/>} />
-        <Route exact path="/react-projects/Rockpaper" element={<Rockpaper/>} />
-        <Route exact path="/react-projects/TodoApp" element={<TodoApp/>} /> 
+        <Route exact path="/Menu" element={<Menu/>} />
+        <Route exact path="/Shorten" element={<Shorten/>} />
+        <Route exact path="/Countries" element={<Countries/>} />
+        <Route exact path="/Tictactoe" element={<Tictactoe/>} />
+        <Route exact path="/Bookmark" element={<Bookmark/>} />
+        <Route exact path="/Rockpaper" element={<Rockpaper/>} />
+        <Route exact path="/TodoApp" element={<TodoApp/>} /> 
       </Routes>
-  </BrowserRouter>
+  </HashRouter>
   )
 }
 

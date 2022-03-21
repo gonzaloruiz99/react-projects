@@ -8,28 +8,28 @@ const Home = () => {
   return (
     <>
     <ul className='projects-box'>
-      <li><Link to="/react-projects/">Home</Link></li>
+      <li><Link to="/">Home</Link></li>
     </ul>
     <ul>
-      <li><Link to="/react-projects/Menu">Menu</Link></li>
+      <li><Link to="/Menu">Menu</Link></li>
     </ul>
     <ul>
-      <li><Link to="/react-projects/Countries">Countries</Link></li>
+      <li><Link to="/Countries">Countries</Link></li>
     </ul>
     <ul>
-      <li><Link to="/react-projects/Tictactoe">Tictactoe</Link></li>
+      <li><Link to="/Tictactoe">Tictactoe</Link></li>
     </ul>
     <ul>
-      <li><Link to="/react-projects/Shorten">Shorten</Link></li>
+      <li><Link to="/Shorten">Shorten</Link></li>
     </ul>
     <ul>
-      <li><Link to="/react-projects/Bookmark">Bookmark</Link></li>
+      <li><Link to="/Bookmark">Bookmark</Link></li>
     </ul>
     <ul>
-      <li><Link to="/react-projects/Rockpaper">Rockpaper</Link></li>
+      <li><Link to="/Rockpaper">Rockpaper</Link></li>
     </ul>
     <ul>
-      <li><Link to="/react-projects/Todoapp">Todoapp</Link></li>
+      <li><Link to="/Todoapp">Todoapp</Link></li>
     </ul>
       
 

@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
+:root{
+
+    /*colors*/
+    --clr-background: #E6E6E6;
+    --clr-boardColor: #FFFFFF;
+
+    --clr-Dark-violet: rgb(97, 67, 97);;
+
+    --ff-primary: 'Montserrat', sans-serif;
+
+}
+
+
+body {
+    font-family: var(--ff-primary);
+    font-size: 16px;
+    background: #fff;
+    margin-bottom: 100px;
+
+}
+
+
+
+/*fonts config*/
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+h1 {
+  font-size: 2rem;
+  font-weight: 400;
+
+}
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+}
+
+
+/* ------------------------------------- 1. MAIN CONFIG ---------------------------------- */
+
+body{ 
+    background-color: var(--clr-background);
+    
+    
+    
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title{
+    margin-top:10vh;
+    color: var(--clr-Dark-violet);
+    text-transform: uppercase;
+}
+
+.main-container{
+    margin-top:10vh;
+    position: relative;
+    background-color:var(--clr-boardColor);
+
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.space{
+    height: 100px;
+    width: 100px;
+    margin: 25px;
+    background-color: var(--clr-Dark-violet);
+    border-radius: 10px;
+}
+.item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/*
+Board 2 
+
+.main-container{
+    margin-top:10vh;
+    position: relative;
+    background-color:var(--clr-boardColor);
+    height: 400px;
+    width: 400px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 15px;
+    column-gap: 15px;
+    row-gap: 15px;
+}
+
+.space{
+    height: auto;
+    width: auto;
+    background-color: var(--clr-Dark-violet);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}*/
+
+.space:hover{
+    background-color: rgb(175, 139, 85);
+}
+
+.circle{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #fff;
+    background-color: transparent;
+}
+
+.cross{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}
+.cross:after {
+    content: '';
+    height: 50px;
+    border-left: 3px solid #fff;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 24px;
+}
+.cross:before {
+    content: '';
+    height: 50px;
+    border-left: 3px solid #fff;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 24px;
+}
+
+/* WINER SECTION*/
+
+.winner-section{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.winner-section h2{
+
+}
+
+.winner-section button{
+  color: #fff;
+  background-color: var(--clr-Dark-violet);
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.winner-section button:hover{
+  color: var(--clr-Dark-violet);
+  font-weight: 700;
+  background: none;
+  border: 1px solid var(--clr-Dark-violet);
+}

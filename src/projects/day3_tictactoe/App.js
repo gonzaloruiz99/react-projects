@@ -1,7 +1,7 @@
-import React,{useEffect} from 'react'
+import React,{useEffect, useState} from 'react'
 
 import Board from './Board'
-
+import Modal from './Modal'
 
 const App = () => {
 
@@ -13,15 +13,14 @@ const App = () => {
         link.href = "./styles/tictactoe.css";
       
         document.head.appendChild(link);
-        document.title = "GR | TiTacToe Game"
+        document.title = "TicTacToe Game | GR projects"
 
     }, [])
 
+    // const [modal, setModal] = useState();
+    const [modalContent, setModalContent] = useState( {visible:false,text:"", color:""} );
+    
 
-
-    const closeModal = ()=>{
-
-    };
     /*
     .pasar useStates y winnerdiv a este archivo
     .Poder jugar llenado el tablero
@@ -36,7 +35,10 @@ const App = () => {
         <>
         <main>
             <h1 className="title">tic tac toe</h1>
-            <Board></Board>
+            <div className="modal-container" style={{position:"relative"}}>
+            {modalContent.visible && <Modal  modalContent={modalContent} setModalContent={setModalContent}></Modal>}
+            </div>
+            <Board setModalContent={setModalContent} ></Board>
             
         </main>
         </>

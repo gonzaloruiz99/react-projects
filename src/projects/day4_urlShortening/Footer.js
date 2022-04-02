@@ -27,33 +27,6 @@ const Footer = () => {
                 </div>
             </section>
 
-            {/* <table>
-                <tr>
-                    <th>features</th>
-                    <th>resources</th>
-                    <th>company</th>
-                </tr>
-                <tr>
-                    <td><a href="#">link shortening</a></td>
-                    <td><a href="#">blog</a></td>
-                    <td><a href="#">about</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#">branded links</a></td>
-                    <td><a href="#">developers</a></td>
-                    <td><a href="#">our team</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#">analytics</a></td>
-                    <td><a href="#">support</a></td>
-                    <td><a href="#">careers</a></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td><a href="#">contact</a></td>
-                </tr>
-            </table> */}
 
             <section className="social-icons">
                 <a href="#">
@@ -70,7 +43,13 @@ const Footer = () => {
                 </a>
                 
             </section>
-
+            <div class="attribution">
+            <p> Challenge by </p>
+            <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel='noreferrer'>Frontend Mentor.</a>
+            <p> Coded by </p>
+            <a href="#">Gonzalo Ruiz.</a>
+                            
+        </div>
         </footer>
     )
 }

@@ -1,5 +1,5 @@
 import React,{useState, useEffect} from 'react'
-
+import Attribution from './Attribution'
 
 import Counter from './Counter'
 import Logic from './Logic'
@@ -38,7 +38,7 @@ const App = () => {
         link.href = "./styles/rockpaper.css";
       
         document.head.appendChild(link);
-        document.title = "GR| RockPaperSissors";
+        document.title = "RockPaperSissors | GR projects";
 
 
     }, [])
@@ -62,7 +62,8 @@ const App = () => {
             </div>
             <Logic setCounter={setCounter} counter={counter}/>
             <Rules/>
-            
+
+            {/* <Attribution></Attribution>   */}
         </div>
         </>
     )

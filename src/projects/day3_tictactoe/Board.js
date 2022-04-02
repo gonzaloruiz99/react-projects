@@ -2,12 +2,11 @@ import React,{useState} from 'react'
 import Modal from './Modal';
 
 
-const Board = () => {
+const Board = ({setModalContent}) => {
     const [symbol, setSymbol] = useState("cross");
     const [cells, setCells] = useState(Array(9).fill(''));
     
     const [winner, setWinner] = useState();
-    const [modal, setModal] = useState();
 
     
 
@@ -55,18 +54,19 @@ const Board = () => {
 
     const selectedSpace = (num) => {
 
-        
+        if(winner){
+           setModalContent({visible:true,text:"already a winner!", color:"rgb(175, 139, 85)"})
+            return;
+        }
 
         if(cells[num] !== ''){
-            alert("already clicked");
+                       setModalContent({visible:true,text:"already clicked!", color:"rgb(175, 85, 85)"})
+
             //post full board Logic here
             return
         }
 
-        if(winner){
-            alert("already a winner");
-            return;
-        }
+        
 
 
         let squares = [...cells]; 

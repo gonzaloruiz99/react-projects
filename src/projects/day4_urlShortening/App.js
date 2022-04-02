@@ -1,10 +1,10 @@
-import React,{useEffect} from 'react'
-
+import React,{useEffect, useState} from 'react'
 
 
 import Navbar from './Navbar'
 import Shorter from './Shorter'
 import Footer from './Footer'
+import Modal from './Modal'
 /*
 A arreglaar:
 . navbar agregar input y estilizar
@@ -65,10 +65,14 @@ const App = () => {
     
         document.head.appendChild(link);
         document.head.appendChild(medialink);
-        document.title = "GR| url Shortener";
+        document.title = "url Shortener | GR projects";
 
     }, [])
 
+
+
+
+    const [modalContent, setModalContent] = useState( {visible:false,text:"", color:""} );
 
 
 
@@ -87,7 +91,10 @@ const App = () => {
             <button>get started</button>
             </div>
         </section>
-        <Shorter></Shorter>
+        <div className="modal-container" style={{position:"relative"}}>
+            {modalContent.visible && <Modal  modalContent={modalContent} setModalContent={setModalContent}></Modal>}
+        </div>
+        <Shorter setModalContent={setModalContent}></Shorter>
         <section className="advanced-statistics">
             <h1>Advanced statistics</h1>
             <p>Track how your links are performing across the web with our
@@ -108,7 +115,9 @@ const App = () => {
             <h3>boost your links today</h3>
             <button>get started</button>
         </section>
-        <Footer></Footer> 
+        <Footer></Footer>
+        
+        
         </>
     )
 }

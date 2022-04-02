@@ -1,6 +1,5 @@
 import React,{useState,useReducer, useEffect } from 'react'
 
-
 import {reducer} from './reducer';
 import Modal from './Modal';
 import DarkMode from './DarkMode';
@@ -40,7 +39,7 @@ const App = () => {
         link.href = "./styles/todoapp.css";
   
         document.head.appendChild(link);
-        document.title = "GR| ToDo App";
+        document.title = "ToDo App | GR projects";
     }, [])
     
       
@@ -156,7 +155,13 @@ const App = () => {
                 </section>
 
             </div>
-            
+            <div className="attribution" style={{bottom: "20px"}}>
+            <button >x</button>
+            <p style={{fontSize: "0.7rem"}}> Challenge by </p >
+            <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel='noreferrer'>Frontend Mentor.</a>
+            <p style={{fontSize: "0.7rem"}}> Coded by </p>
+            <a href="#">Gonzalo Ruiz.</a>         
+            </div>            
         </main>
         </>
     )

@@ -232,6 +232,7 @@ p {
     padding-bottom: 1rem;
     border-top: 1px solid rgba(197, 197, 197,0.5);
     width: min(70vw,400px);
+    z-index: 2;
 }
 .active-btn{
     border-bottom: 3px solid var(--Soft-Red);
@@ -248,16 +249,7 @@ article {
   transition: var(--transition-one);
 }
 
-.prevSlide{
-    opacity: 1;
-    transform: translateX(0);
-}
-.activeSlide{
-    transform: translateX(100%);
-}
-.nextSlide{
-    transform: translateX(-100%);   
-}
+
 
 .features-description{ 
     text-align: center;
@@ -402,6 +394,7 @@ footer{
     align-items: center;
     padding: 3rem 0;
     align-items: center;
+    position: relative;
 }
 
 
@@ -446,6 +439,7 @@ footer, .footer-links, .socials{
 
 footer{
     justify-content: space-around;
+    padding-bottom: 20px;
 }
 
 

@@ -33,6 +33,23 @@ const Features = () => {
     const [features, setFeatures] = useState(data);
     const [index, setIndex] = useState(0);
 
+
+
+
+
+    var prevSlide = {
+        opacity: "1",
+        transform: "translateX(0)"
+    }
+    var activeSlide = {
+        transform: "translateX(100%)"
+    }
+    var nextSlide = {
+        transform: "translateX(-100%)"
+    }
+
+
+
     return (
         <div className="section-center">
             <div className="btn-container">
@@ -46,16 +63,16 @@ const Features = () => {
             {features.map((feature,featureIndex)=>{
                 const {id, title, text, image} = feature;
 
-                let position = 'nextSlide';
+                let position = nextSlide;
                 if(featureIndex === index){
-                    position = 'activeSlide';
+                    position = activeSlide;
                 }
                 if(featureIndex === index-1 || 
                     (index === 0 && featureIndex=== features.length -1)){
-                    position = 'prevSlide';
+                    position = prevSlide;
                 }
 
-                return <article className={position} key={id}>
+                return <article style={position} key={id}>
                     <div className="grid-container">
                         <div className="img-container left-img">
                             <img src={image} alt={title} className="person-img" />

@@ -5,15 +5,16 @@ const Modal = ({modalContent,setModalContent}) => {
 
   var modalStyle = {
     backgroundColor: modalContent.color,
-    color: "#E6E6E6",
+    color: "#fff",
+    padding: "8px 0",
     position: "absolute",
-    top: "1rem",
+    top: "-1rem",
     left: "50%",
     borderRadius: "1rem",
     transform: "translateX(-50%)",
     display: "inline-block",
-    width: "max-content",
-    padding: "5px 100px",
+    textAlign: "center",
+    width: "min(80vw,500px)",
 
   }
 
@@ -25,7 +26,7 @@ const Modal = ({modalContent,setModalContent}) => {
 
 
   return <div className="modal" style={modalStyle}>
-    <p>{modalContent.text}</p>
+    <h5>{modalContent.text}</h5>
   </div>;
 };
 

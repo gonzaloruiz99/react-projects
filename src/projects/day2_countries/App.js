@@ -13,7 +13,7 @@ const App = () => {
         link.type = "text/css";
         link.href = "./styles/countries.css";
         document.head.appendChild(link);
-        document.title = "GR| Countries API"
+        document.title = "Countries API | GR projectsº"
         
 
     }, [])

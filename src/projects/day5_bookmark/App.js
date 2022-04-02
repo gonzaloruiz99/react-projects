@@ -1,4 +1,5 @@
 import React,{useEffect} from 'react'
+
 import NavBar from './NavBar'
 import Features from './Features'
 import Questions from './questions/Questions'
@@ -87,7 +88,7 @@ const App = () => {
     
             document.head.appendChild(link);
             document.head.appendChild(medialink);
-            document.title = "GR| Bookmark";
+            document.title = "Bookmark | GR projects";
 
 
     }, [])
@@ -170,8 +171,16 @@ const App = () => {
                                 <a href="#"><img src="./styles/images5/icon-twitter.svg" alt="twitter" /></a>
                             </li>
                         </ul>
+                        <div class="attribution">
+                            <p> Challenge by </p>
+                            <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel='noreferrer'>Frontend Mentor.</a>
+                            <p> Coded by </p>
+                            <a href="#">Gonzalo Ruiz.</a>
+                            
+                        </div>
                 </footer>
             </div>
+            
         </main>
         </>
     )

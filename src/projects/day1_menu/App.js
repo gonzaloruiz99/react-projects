@@ -32,7 +32,7 @@ function App() {
         link.href = "./styles/menu.css";
       
         document.head.appendChild(link);
-        document.title = "GR| Menu Filter";
+        document.title = "Menu Filter | GR projects";
   
       }, [])
 
@@ -72,6 +72,12 @@ function App() {
       <Categories categories={categories} filterItems={filterItems}></Categories>
       <Menu items={menuItems} ></Menu>
     </section>
+    <div class="attribution" style={{top: "20px"}}>
+      <p> Challenge by </p>
+      <a href="https://www.johnsmilga.com/" target="_blank" rel='noreferrer'>John Smilga.</a>
+      <p> Coded by </p>
+      <a href="#">Gonzalo Ruiz.</a>                      
+    </div>
   </main>
   </>
   )

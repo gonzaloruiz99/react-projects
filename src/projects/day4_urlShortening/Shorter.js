@@ -15,7 +15,7 @@ import React,{useState, useEffect} from 'react'
 
 
 
-const Shorter = () => {
+const Shorter = ({setModalContent}) => {
     const [link, setLink] = useState("");
     const [links, setLinks] = useState([]);
 
@@ -40,12 +40,21 @@ const Shorter = () => {
             const newLink = {link, id: new Date().getTime().toString(),shortenLink}
             setLinks([...links, newLink]);
             setLink("");
+            setModalContent({visible:true,text:"link Shortened!", color:"var(--Cyan)"})
         }
         }
         catch{
-            alert("Broken or misspelled Link. Try Again! ")
+            setModalContent({visible:true,text:"Broken or misspelled Link. Try Again!", color:"var(--secondary-red)"})
         }
         
+    }
+
+
+    const copyLink = (link) => {
+        navigator.clipboard.writeText(link);
+        setModalContent({visible:true,text:"Shorten link Copied!", color:"var(--Cyan)"})
+
+
     }
 
 
@@ -65,7 +74,7 @@ const Shorter = () => {
                             <h4>{link}</h4>
                             <div className="shorten-item">
                                 <p>{shortenLink}</p>
-                                <button onClick={()=> navigator.clipboard.writeText(shortenLink)}>copy</button>
+                                <button onClick={()=> copyLink(shortenLink) }>copy</button>
 
                             </div>
                         </div>

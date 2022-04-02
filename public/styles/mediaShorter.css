@@ -204,7 +204,7 @@
 
 
 /*footer*/
-@media screen and (min-width: 800px){
+@media screen and (min-width: 920px){
   footer{
     flex-direction: row;
     align-items: flex-start;

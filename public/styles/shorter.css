@@ -34,11 +34,11 @@ File Content:
 /* --------- MAIN CONFIG --------- */
 
 
-
 body {
     font-family: var(--ff-primary);
     font-size: 16px;
     background: #fff;
+    position: relative;
 
 }
 
@@ -68,7 +68,6 @@ h4 {
   font-size: 0.875rem;
 }
 p {
-  margin-bottom: 1.25rem;
   color: var(--neutral-grayish-violet);
 }
 

@@ -85,12 +85,14 @@ body {
 }
 
 
-
 body {
     color: var(--clr-font);
     background: var(--clr-background);
     font-size: 18px;
     text-align: center;
+}
+main{
+    position: relative;
 }
 
 input{

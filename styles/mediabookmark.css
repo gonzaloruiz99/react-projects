@@ -1,0 +1,112 @@
+
+:root{
+
+    /*colors*/
+    --Soft-Blue: hsl(231, 69%, 60%);
+    --Soft-Red: hsl(0, 94%, 66%);
+
+    --Grayish-Blue: hsl(229, 8%, 60%);
+    --Very-Dark-Blue: hsl(229, 31%, 21%);
+
+    --ff-primary: 'Rubik', sans-serif;
+    --transition-one: 0.4s;
+}
+
+@media screen and (min-width: 900px) {
+
+    .nav-center {
+    height: auto;
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 4rem;
+    }
+    .nav-header {
+        padding: 0;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+    .links {
+        position: static;
+        top: auto;
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        height: auto;
+        padding:0;
+        width: auto;
+    }
+
+    .links a {
+        color: var(--Grayish-Blue) ;
+        padding: 0;
+        margin: 0 0.5rem;
+    }
+
+    /* ----------------- features container  ------------- */
+    .grid-container{
+    padding-top: 0;
+    margin: 5vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    }
+    .main-container{
+        margin-top: 2rem;
+
+    }
+
+    .img-container{
+        grid-column-start: 2;
+    }
+    .left-img{
+        grid-column-start: 1;
+    }
+
+    .img-container img{
+        height: auto;
+        width: min(45vw, 550px);
+    }
+    .vector1{
+        height: min(23vw,340px);
+    }
+    .description{
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 45vw;
+        height: auto;
+    }
+    .description p,h2{
+        width: 400px;
+    }
+
+    .btn-container{
+        flex-direction: row;
+        width: 600px;
+        margin: 3rem 0 ;
+    }
+    .btn-container button{
+        border-top: none;
+    }
+
+    /* -------------------------------------- extensions section -------------------------------------- */
+    .extension-container{
+        margin-top: 24rem;
+    }
+
+
+    .boards{
+        flex-direction: row;
+    }
+
+
+    /* -------------------------------------- footer -------------------------------------- */
+    .contact-us form{
+    flex-direction: row;
+}
+}

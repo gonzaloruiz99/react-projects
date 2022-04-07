@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/react-projects/static/css/main.88871a51.css",
+    "main.js": "/react-projects/static/js/main.bf4992a9.js",
+    "static/media/menu_img.png": "/react-projects/static/media/menu_img.9965328c5b0bf3ddcb5b.png",
+    "static/media/rockpaper_img.png": "/react-projects/static/media/rockpaper_img.aa3df9eb754a17037c75.png",
+    "static/media/todo_img.png": "/react-projects/static/media/todo_img.56288c3cc28b84d67d5f.png",
+    "static/media/countries_img.png": "/react-projects/static/media/countries_img.48d564486001dd59156a.png",
+    "static/media/shorter_img.png": "/react-projects/static/media/shorter_img.8e68288f0b83a0e6f12a.png",
+    "static/media/bookmark_img.png": "/react-projects/static/media/bookmark_img.0ea288120791a45150a3.png",
+    "static/media/tictactoe_img.png": "/react-projects/static/media/tictactoe_img.5146d8077247dd1c4650.png",
+    "index.html": "/react-projects/index.html",
+    "main.88871a51.css.map": "/react-projects/static/css/main.88871a51.css.map",
+    "main.bf4992a9.js.map": "/react-projects/static/js/main.bf4992a9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.88871a51.css",
+    "static/js/main.bf4992a9.js"
+  ]
+}

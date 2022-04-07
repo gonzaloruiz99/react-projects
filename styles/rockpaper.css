@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;600;700&display=swap');
+
+:root{
+
+    /*colors*/
+    /*
+    linear-gradient(to right,hsl(349, 71%, 52%) 50%, hsl(349, 70%, 56%);
+    */
+
+    --Lizard-Gradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%);
+    --Cyan: rgb(64, 185, 206) to hsl(189, 58%, 57%);
+    
+    --shadow-paper: hsl(230, 89%, 62%);
+    --main-paper:hsl(230, 89%, 65%);
+    --shadow-rock: hsl(349, 71%, 52%);
+    --main-rock: hsl(349, 70%, 56%);
+    --shadow-scissors: hsl(39, 89%, 49%);
+    --main-scissors:hsl(40, 84%, 53%);
+
+
+    --Dark-Text: hsl(229, 25%, 31%);
+    --Score-Text: hsl(229, 64%, 46%);
+    --Header-Outline: hsl(217, 16%, 45%);
+
+    --bg-radial-Gradient: linear-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%)) ;
+    --ff-primary: 'Barlow Semi Condensed', sans-serif;
+    --transition: all 0.3s linear;
+    --radius-1: 10px;
+}
+
+
+/* --------------------------- MAIN CONFIG --------------------------- */
+
+
+
+body {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    background: linear-gradient(to right,hsl(214, 47%, 23%) 10%, hsl(237, 49%, 15%));
+    text-transform: uppercase;
+    
+}
+
+
+
+
+/* --------------------------- fonts config --------------------------- */
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+h1 {
+  font-size: 1.5rem;
+}
+h2 {
+  font-size: 1rem;
+}
+h3 {
+  font-size: 0.8rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+}
+
+
+/* --------------------------- main container --------------------------- */
+
+.main-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    min-height: 600px;
+    height: 100vh;
+}
+
+
+.title{
+    margin-top: 80px;
+    width: 80vw;
+    max-width: 600px;
+    
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid rgba(255, 255, 255,0.2);
+    border-radius: 8px;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    font-weight: 600;
+    line-height: 0.8;
+}
+
+
+/* --------------------------- counter container --------------------------- */
+.score-panel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 8px;
+
+    color: var(--Dark-Text);
+}
+.score-panel h3{
+    padding-top: 5px;
+    margin-bottom: -4px;
+}
+.score-panel h1{
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+
+/* --------------------------- selections --------------------------- */
+.icon{
+    background-color: #fff;
+    padding: 35px;
+    max-width: 150px;
+    border-radius: 50%;
+    border: 17px solid var(--main-rock);
+    box-shadow: 0px 6px 0px hsl(349, 66%, 34%);
+}
+.icon:hover {
+    opacity: 80%;
+    transition: var(--transition);
+}
+
+
+.game-container {
+    background: url('./images7/bg-triangle.svg') no-repeat center bottom;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+@media screen and (max-width: 420px) {
+    .icon{
+        padding: 25px;
+        max-width: 120px;
+    }
+
+    .game-container {
+        background: url('./images7/bg-triangle.svg') no-repeat center bottom;
+        background-size: 80%;
+    }
+}
+
+
+
+.scissors{
+    position: relative;
+    left: 50%;
+}
+
+.selection{
+    margin: 10px 30px ;
+}
+
+
+.top-icons{
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* --------------------------- secondary container --------------------------- */
+
+.play-again{
+    text-align: center;
+    padding: min(2vw,2rem);
+    position: relative;
+    bottom: 60px;
+}
+.play-again h1{
+    color: #fff;
+    font-size: min(5vw,3rem);
+}
+
+.again-btn{
+    font-family: var(--ff-primary);
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--Dark-Text);
+    background-color: #fff;
+    height: 60px;
+    width: 100px;
+    border-radius: 8px;
+}
+
+.picked{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+
+
+.final-selection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.final-selection h3{
+    color: #fff;
+    margin: 2rem 0;
+    font-weight: 400;
+}
+
+
+/* ---------------------- RULES ---------------------- */
+
+
+.rules-overlay{
+    background-color: rgba(0, 0, 0,0.7);
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.rules{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 400px;
+    height: 450px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.rules-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.rules-btn{
+    color: #fff;
+    font-family: var(--ff-primary);
+    text-transform: uppercase;
+    align-self: flex-end;
+    border: 1px solid #fff;
+    border-radius: 0.3em;
+    padding: 5px 20px;
+    margin: 10vh 10vw;
+}

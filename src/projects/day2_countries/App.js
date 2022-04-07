@@ -1,5 +1,5 @@
 import React,{useEffect, useState} from 'react'
-
+import Attribution from './Attribution';
 
 import axios from 'axios'
 import DarkMode from './DarkMode';
@@ -13,11 +13,8 @@ const App = () => {
         link.type = "text/css";
         link.href = "./styles/countries.css";
         document.head.appendChild(link);
-        document.title = "Countries API | GR projectsº"
-        
-
+        document.title = "Countries API | GR projects"
     }, [])
-
 
 
 
@@ -28,9 +25,9 @@ const App = () => {
     const [regions,setRegions] = useState([]);
     
 
+
+
     const url= "https://restcountries.com/v3.1/all";
-
-
 
     const fetchData = async () => {
         const response = await axios.get(url);
@@ -121,6 +118,7 @@ const App = () => {
             })}
         </section>
     </div>
+    <Attribution></Attribution>
     </>    
   )
 }

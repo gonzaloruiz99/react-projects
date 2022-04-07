@@ -61,23 +61,9 @@
   --bg-mobile-img: url("./images8/bg-mobile-dark.jpg");
 }
 
-/*
-body {
-    color: var(--clr-font);
-    background: var(--clr-background);
-
-.new-item input{
-    background-color: var(--clr-item-bg);
-    color: var(--clr-item-font);
-
-.item-list{
-  background-color: var(--clr-item-bg);
-  color: var(--clr-item-font);
 
 
-*/
-
-/* --------- MAIN CONFIG --------- */
+/* -------------------------- MAIN CONFIG -------------------------- */
 
 .completed{
   text-decoration: line-through;
@@ -141,7 +127,7 @@ p {
 
 
 
-/*  -------------- main container -------------- */
+/* -------------------------- main container -------------------------- */
 
 header{
     background:  var(--bg-mobile-img) no-repeat;
@@ -168,7 +154,7 @@ main{
     top: -300px;
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: min(400px,90vw);
 }
 
 
@@ -185,7 +171,7 @@ main{
     color: var(--clr-item-font);
     box-shadow: 0px 10px 20px var(--clr-item-shadow);
     margin-top: 40px;
-    width: 350px;
+    width: min(350px,70vw);
     height: 60px;
     border-radius: 8px;
     text-align: left;
@@ -200,7 +186,7 @@ main{
   color: var(--clr-item-font);
   box-shadow: 0px 10px 10px var(--clr-item-shadow);
   margin-top: 15px;
-  width: 400px;
+  width: min(400px,90vw);
   border-radius: 8px;
 }
 
@@ -259,7 +245,7 @@ main{
 
 
 
-/*modal*/
+/* -------------------------- modal -------------------------- */
 
 .modal{
   position: absolute;

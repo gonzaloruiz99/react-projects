@@ -5,8 +5,7 @@ import Modal from './Modal'
 
 const App = () => {
 
-    useEffect(()=>{
-
+    useEffect(()=>{ // dynamic css
         var link = document.createElement('link');
         link.rel = "stylesheet";
         link.type = "text/css";
@@ -14,18 +13,14 @@ const App = () => {
       
         document.head.appendChild(link);
         document.title = "TicTacToe Game | GR projects"
-
     }, [])
 
-    // const [modal, setModal] = useState();
+
     const [modalContent, setModalContent] = useState( {visible:false,text:"", color:""} );
     
 
     /*
-    .pasar useStates y winnerdiv a este archivo
-    .Poder jugar llenado el tablero
-    .Crear Modal para errores en vez del alert
-    .A futuro: Log in de jugadores y contador de partidas ganadas.
+    A futuro: Log in de jugadores y contador de partidas ganadas.
     */
 
     

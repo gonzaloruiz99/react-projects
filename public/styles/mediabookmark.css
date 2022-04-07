@@ -94,7 +94,7 @@
         border-top: none;
     }
 
-    /* ------- extensions section -------*/
+    /* -------------------------------------- extensions section -------------------------------------- */
     .extension-container{
         margin-top: 24rem;
     }
@@ -105,7 +105,7 @@
     }
 
 
-    /* ------ footer -------- */
+    /* -------------------------------------- footer -------------------------------------- */
     .contact-us form{
     flex-direction: row;
 }

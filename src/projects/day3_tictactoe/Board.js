@@ -1,18 +1,17 @@
 import React,{useState} from 'react'
-import Modal from './Modal';
 
 
 const Board = ({setModalContent}) => {
-    const [symbol, setSymbol] = useState("cross");
-    const [cells, setCells] = useState(Array(9).fill(''));
+    const [symbol, setSymbol] = useState("cross"); // toggles piece each round
+    const [cells, setCells] = useState(Array(9).fill('')); // creates an empty array with 9 empty values
     
-    const [winner, setWinner] = useState();
-
+    const [winner, setWinner] = useState(); // defines winner and shows/hides winnerSection
     
 
     const checkForWinner = (squares) => {
 
-        const posibilities = {
+
+        const posibilities = { //posible combination to win
             columns: [
                 [0,3,6],
                 [1,4,7],
@@ -30,15 +29,20 @@ const Board = ({setModalContent}) => {
         }
 
 
-  
 
-        for(let posibilitie in posibilities){
+        /*
+        1. Iterates 8 times, 2 * 3 + 1 * 2 for each pattern inside each posibilitie
+        2. If there isnt a pattern form, it returns
+        3. If the squares pattern values are the same, there is the winner.
+        4. Sets the square pattern value as a winner (cross or circle)
+        */
+        for(let posibilitie in posibilities){ 
             posibilities[posibilitie].forEach((pattern)=>{
                 if(
-                    squares[pattern[0] === ''] ||
+                    squares[pattern[0] === ''] || // first value of each pattern ex: [0,3,6] -> 0
                     squares[pattern[1] === ''] ||
                     squares[pattern[2] === ''] 
-                ){//nothing return
+                ){   return;//nothing 
                 }else if (
                     squares[pattern[0]] === squares[pattern[1]] &&
                     squares[pattern[1]] === squares[pattern[2]] 
@@ -49,26 +53,29 @@ const Board = ({setModalContent}) => {
             })
         }
              
-        
+        if(squares.includes("")){ //Checks for empty or full board
+            //nothing
+        }else if(!winner){
+            setModalContent({visible:true,text:"it's a Tie!", color:"rgb(175, 139, 85)"})
+            setWinner("Nobody :)");
+        }
     }
 
     const selectedSpace = (num) => {
 
+        // first checks for EndGame, tie or Cell already selected
         if(winner){
            setModalContent({visible:true,text:"already a winner!", color:"rgb(175, 139, 85)"})
             return;
         }
-
         if(cells[num] !== ''){
-                       setModalContent({visible:true,text:"already clicked!", color:"rgb(175, 85, 85)"})
-
-            //post full board Logic here
-            return
+            setModalContent({visible:true,text:"already clicked!", color:"rgb(175, 85, 85)"})
+            return;
         }
 
+
         
-
-
+        // Sets the value of the empy array with an icon/piece, and changes the useState for the other piece
         let squares = [...cells]; 
         if(symbol=== "cross"){
             squares[num] = 'cross'
@@ -86,7 +93,7 @@ const Board = ({setModalContent}) => {
         setWinner('');
     }
 
-    const Cell = ({num}) => {
+    const Cell = ({num}) => { // indiviudal <td> 
         return<td className="space" onClick={()=> selectedSpace(num)}>
             <div className="item">
                 <span className={` ${cells[num]}`}></span>
@@ -120,16 +127,12 @@ const Board = ({setModalContent}) => {
                 </tbody>
             </table>
         </section>
-            {/* {modal && 
-            <Modal></Modal>
-            } */}
             {winner &&
             <section className="winner-section">
                 <h2>the winner is {winner}</h2>
                 <button onClick={()=> resetGame()}>play again!</button>
             </section>
             }
-        
         </>
     )
 }

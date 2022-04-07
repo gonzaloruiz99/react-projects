@@ -2,12 +2,9 @@ import React,{useState, useEffect} from 'react'
 
 
 /*
-
 . guardar el link submitido en un state
 . pasarlo a otro state que se mapee en la pagina
 . dar opcion de copiar link 
-. 
-
 */
 
 
@@ -21,14 +18,11 @@ const Shorter = ({setModalContent}) => {
 
 
     const shortererLink = async (IDlink) => {
-    
-    const url = `https://api.shrtco.de/v2/shorten?url=${IDlink}`
+        const url = `https://api.shrtco.de/v2/shorten?url=${IDlink}`
 
-    const response = await fetch(url);
-    const shorten = await response.json();
-
-    return shorten.result.full_short_link;
-
+        const response = await fetch(url);
+        const shorten = await response.json();
+        return shorten.result.full_short_link;
     }
 
 
@@ -40,7 +34,7 @@ const Shorter = ({setModalContent}) => {
             const newLink = {link, id: new Date().getTime().toString(),shortenLink}
             setLinks([...links, newLink]);
             setLink("");
-            setModalContent({visible:true,text:"link Shortened!", color:"var(--Cyan)"})
+            setModalContent({visible:true,text:"Link Shortened!", color:"var(--Cyan)"})
         }
         }
         catch{
@@ -53,8 +47,6 @@ const Shorter = ({setModalContent}) => {
     const copyLink = (link) => {
         navigator.clipboard.writeText(link);
         setModalContent({visible:true,text:"Shorten link Copied!", color:"var(--Cyan)"})
-
-
     }
 
 

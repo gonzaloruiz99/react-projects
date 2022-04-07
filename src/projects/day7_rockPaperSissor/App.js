@@ -62,9 +62,8 @@ const App = () => {
             </div>
             <Logic setCounter={setCounter} counter={counter}/>
             <Rules/>
-
-            {/* <Attribution></Attribution>   */}
         </div>
+        <Attribution></Attribution>   
         </>
     )
 }

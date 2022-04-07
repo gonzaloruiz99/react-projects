@@ -26,7 +26,6 @@ const attributionP = {
 }
 const attributionA ={
   color: "rgba(255,255,255,0.6)",
-  marginBottom:  "2px 0",
   fontSize: "0.8rem",
   textTransform: "capitalize",
 
@@ -47,7 +46,7 @@ const attributionButton = {
     {modal && <div className="attribution" style={attribution}>
             <button style={attributionButton} onClick={() => setShowModal(false)} ><i class="fa-solid fa-x"></i></button>
             <p style={attributionP}> Challenge by </p >
-            <a style={attributionA} href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel='noreferrer'>Frontend Mentor.</a>
+            <a style={attributionA} href="https://www.johnsmilga.com/" target="_blank" rel='noreferrer'>John Smilga.</a>
             <p style={attributionP}> Coded by </p>
             <a style={attributionA} href="https://tak9191.github.io/portfolio_1.1/">Gonzalo Ruiz.</a>         
     </div>

@@ -1,21 +1,11 @@
 import React,{useState,useReducer, useEffect } from 'react'
+import Attribution from './Attribution';
 
 import {reducer} from './reducer';
 import Modal from './Modal';
 import DarkMode from './DarkMode';
 
-/*
-En este archivo:
-. UseReducer
 
-Partes:
-. 
-
-En reducer:
-. Modal bandera y texto que muestre
-. 
-
-*/
 
 
 
@@ -32,7 +22,7 @@ const defaultState = {
 
 const App = () => {
 
-      useEffect(()=>{
+      useEffect(()=>{ // dynamic css and title
         const link = document.createElement('link');
         link.rel = "stylesheet";
         link.type = "text/css";
@@ -154,15 +144,9 @@ const App = () => {
                     
                 </section>
 
-            </div>
-            <div className="attribution" style={{bottom: "20px"}}>
-            <button >x</button>
-            <p style={{fontSize: "0.7rem"}}> Challenge by </p >
-            <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel='noreferrer'>Frontend Mentor.</a>
-            <p style={{fontSize: "0.7rem"}}> Coded by </p>
-            <a href="#">Gonzalo Ruiz.</a>         
-            </div>            
+            </div>         
         </main>
+        <Attribution></Attribution>
         </>
     )
 }

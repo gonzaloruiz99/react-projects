@@ -42,14 +42,7 @@ const Footer = () => {
                     <img src="./styles/images4/icon-instagram.svg" alt="facebook" />
                 </a>
                 
-            </section>
-            <div class="attribution">
-            <p> Challenge by </p>
-            <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel='noreferrer'>Frontend Mentor.</a>
-            <p> Coded by </p>
-            <a href="#">Gonzalo Ruiz.</a>
-                            
-        </div>
+            </section>            
         </footer>
     )
 }

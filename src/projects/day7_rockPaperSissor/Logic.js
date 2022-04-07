@@ -27,9 +27,9 @@ const picks = [
 
 
 /*
-.DONE arreglar logica ifs, para que cuente lasvictorias
+.DONE arreglar logica ifs, para que cuente las victorias
 .DONE agregar sistema de puntuacion
-. Agregar un objeto a selections, que sea "you picked" y "the ouse picked" respectivamente
+. Agregar un objeto a selections, que sea "you picked" y "the house picked" respectivamente
 . Agregar IDs individuales
 . Agregar css a la pagina secundaria.
 . Opcional: hacer lagarto spock
@@ -42,13 +42,11 @@ const picks = [
 
 
 const Logic = ({setCounter,counter}) => {
-    const [screen, setScreen] = useState(true);
-    const [selections, setSelections] = useState([]);
-    const [victory, setVictory] = useState('');
+    const [screen, setScreen] = useState(true); // Conditions between both Returns
+    const [selections, setSelections] = useState([]); // saves user and PC selection
+    const [victory, setVictory] = useState(''); // Sets the match result (win, lose, tie)
 
-    // useEffect(() => {
-        
-    // }, [victory])
+
 
     const playGame = (yourSelec, houseSelec) =>{
 
@@ -81,7 +79,6 @@ const Logic = ({setCounter,counter}) => {
     }
 
     const randomPick = () =>{
-        // const picks = ['paper','scissors','rock']
         let randomNumber = Math.floor(Math.random() * picks.length);
         
         return picks[randomNumber];

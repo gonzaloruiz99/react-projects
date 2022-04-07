@@ -1,20 +1,10 @@
 import React,{useEffect, useState} from 'react'
-
+import Attribution from './Attribution'
 
 import Navbar from './Navbar'
 import Shorter from './Shorter'
 import Footer from './Footer'
 import Modal from './Modal'
-/*
-A arreglaar:
-. navbar agregar input y estilizar
-. Convertir el link en shorter
-. Boton que copie el link
-. Responsive -> arreglar
-. Responsive -> Cambiar medidas por Ems, disminuir responsive duro con Ems, y limitar titulos y parrafos
-. 
-
-*/
 
 
 
@@ -52,12 +42,11 @@ const App = () => {
 
 
     useEffect(()=>{
-
         var link = document.createElement('link');
             link.rel = "stylesheet";
             link.type = "text/css";
             link.href = "./styles/shorter.css";
-        
+    
         var medialink = document.createElement('link');
             medialink.rel = "stylesheet";
             medialink.type = "text/css";
@@ -66,18 +55,12 @@ const App = () => {
         document.head.appendChild(link);
         document.head.appendChild(medialink);
         document.title = "url Shortener | GR projects";
-
     }, [])
 
 
 
 
     const [modalContent, setModalContent] = useState( {visible:false,text:"", color:""} );
-
-
-
-
-
 
     return (
         <>
@@ -117,8 +100,9 @@ const App = () => {
         </section>
         <Footer></Footer>
         
-        
+        <Attribution></Attribution>
         </>
+        
     )
 }
 

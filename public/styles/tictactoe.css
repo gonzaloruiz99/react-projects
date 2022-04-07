@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
+
 :root{
 
     /*colors*/
@@ -15,14 +16,13 @@
 body {
     font-family: var(--ff-primary);
     font-size: 16px;
-    background: #fff;
+    background-color: var(--clr-background);
     margin-bottom: 100px;
-
 }
 
 
 
-/*fonts config*/
+/* --------------------------- fonts config --------------------------- */
 h1,
 h2,
 h3,
@@ -51,14 +51,8 @@ p {
 }
 
 
-/* ------------------------------------- 1. MAIN CONFIG ---------------------------------- */
+/* --------------------------- 1. MAIN CONFIG --------------------------- */
 
-body{ 
-    background-color: var(--clr-background);
-    
-    
-    
-}
 
 main{
     display: flex;
@@ -86,12 +80,17 @@ main{
 }
 
 .space{
-    height: 100px;
-    width: 100px;
+    height: min(100px, 25vw);
+    width: min(100px, 25vw);
     margin: 25px;
     background-color: var(--clr-Dark-violet);
     border-radius: 10px;
 }
+.space:hover{
+  background-color: rgb(175, 139, 85);
+}
+
+
 .item{
   display: flex;
   justify-content: center;
@@ -100,39 +99,8 @@ main{
 
 
 
-/*
-Board 2 
-
-.main-container{
-    margin-top:10vh;
-    position: relative;
-    background-color:var(--clr-boardColor);
-    height: 400px;
-    width: 400px;
-    border-radius: 10px;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    padding: 15px;
-    column-gap: 15px;
-    row-gap: 15px;
-}
-
-.space{
-    height: auto;
-    width: auto;
-    background-color: var(--clr-Dark-violet);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}*/
-
-.space:hover{
-    background-color: rgb(175, 139, 85);
-}
 
 .circle{
-
     position: absolute;
     width: 50px;
     height: 50px;
@@ -142,7 +110,6 @@ Board 2
     border-color: #fff;
     background-color: transparent;
 }
-
 .cross{
     position: absolute;
     width: 50px;
@@ -165,7 +132,8 @@ Board 2
     left: 24px;
 }
 
-/* WINER SECTION*/
+
+/* --------------------------- WINER SECTION --------------------------- */
 
 .winner-section{
   margin-top: 40px;
@@ -173,10 +141,6 @@ Board 2
   flex-direction: column;
   justify-content: center;
   
-}
-
-.winner-section h2{
-
 }
 
 .winner-section button{

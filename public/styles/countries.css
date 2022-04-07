@@ -40,7 +40,7 @@
 }
 
 
-/*---------reset and basics ------------*/
+/* -------------------------------------- reset and basics -------------------------------------- */
 
 
 
@@ -77,7 +77,7 @@ img {
 }
 
 
-/*--------- navbar ------------*/
+/* -------------------------------------- navbar -------------------------------------- */
 
 .nav-center{
   display: flex;
@@ -166,11 +166,8 @@ img {
 
 /*
 Uso de grid para bloques o mapeo de objetos:
- uTILIZAR auto-fill, para que solo se acomode responsablemente.
+ Utilizar auto-fill, para que solo se acomode responsablemente.
  ->     grid-template-columns: repeat(auto-fill, 16em);
-
-
-
 */
 
 .theme-btn{

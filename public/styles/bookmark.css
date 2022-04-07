@@ -57,7 +57,7 @@ p {
 }
 
 
-/*NAV BAR*/
+/* -------------------------------------- NAV BAR -------------------------------------- */
 .nav-center {
     height: 25vh;
 }
@@ -135,7 +135,7 @@ p {
 
 
 
-/*  ---------------------- hero container ----------------------  */
+/* -------------------------------------- hero container --------------------------------------  */
 
 .grid-container{
     margin: 5vh;
@@ -158,7 +158,7 @@ p {
 }
 .img-container img{
     height: auto;
-    width: max(400px,60vw);
+    width: max(330px,60vw);
 }
 .description{
     text-align: center;
@@ -168,8 +168,21 @@ p {
     height: auto;
 }
 .description p,h2{
-    width: auto;
+    width: 80vw;
+    
 }
+@media screen and (max-width: 400px) {
+    .grid-container {
+        margin: 1vh;
+    }
+    .browsers-opc{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+}
+
 .vector1{
     position: absolute;
     top: 80px;
@@ -205,7 +218,7 @@ p {
 
 
 
-/*  ---------------------- features container ----------------------  */
+/* -------------------------------------- features container --------------------------------------  */
 
 .features-container{
     display: flex;
@@ -260,7 +273,7 @@ article {
 }
 
 
-/*  ---------------------- extension container ----------------------  */
+/* -------------------------------------- extension container --------------------------------------  */
 
 
 .extension-container{
@@ -313,7 +326,7 @@ article {
     border-bottom: 5px dotted rgba(61, 61, 61,0.1);
 }
 
-/*  ---------------------- questions container ----------------------  */
+/* -------------------------------------- questions container --------------------------------------  */
 
 
 .questions-container{
@@ -341,7 +354,7 @@ article {
     justify-content: space-between;
 }
 
-/* --------- footer -----------*/
+/* -------------------------------------- footer -------------------------------------- */
 
 .footer-container{
     margin-top: 5rem;

@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from 'react';
-
+import Attribution from './Attribution';
 
 import Menu from './Menu';
 import Categories from './Categories';
@@ -9,7 +9,6 @@ import DarkMode from './darkMode';
 
 /*
 En este archivo:
-
 . Crear un nuevo array desde otro, sin repetidos -> new Set
 . Filtrar un array.map 
 . Mostrar items de un json con .map y ${}
@@ -23,9 +22,6 @@ function App() {
 
 
   useEffect(()=>{
-
-      
-
       var link = document.createElement('link');
         link.rel = "stylesheet";
         link.type = "text/css";
@@ -33,7 +29,6 @@ function App() {
       
         document.head.appendChild(link);
         document.title = "Menu Filter | GR projects";
-  
       }, [])
 
   
@@ -72,13 +67,8 @@ function App() {
       <Categories categories={categories} filterItems={filterItems}></Categories>
       <Menu items={menuItems} ></Menu>
     </section>
-    <div class="attribution" style={{top: "20px"}}>
-      <p> Challenge by </p>
-      <a href="https://www.johnsmilga.com/" target="_blank" rel='noreferrer'>John Smilga.</a>
-      <p> Coded by </p>
-      <a href="#">Gonzalo Ruiz.</a>                      
-    </div>
   </main>
+  <Attribution></Attribution>
   </>
   )
 }

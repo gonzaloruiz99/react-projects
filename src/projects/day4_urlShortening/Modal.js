@@ -15,6 +15,7 @@ const Modal = ({modalContent,setModalContent}) => {
     display: "inline-block",
     textAlign: "center",
     width: "min(80vw,500px)",
+    opacity: "60%",
 
   }
 
